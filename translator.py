@@ -4,10 +4,8 @@ import streamlit as st
 openai.api_key = st.secrets["SECRET_KEY"]
 
 
-st.title('Translator')
-
-st.text('Escribe el texto en español:')
-prompt_text = st.text_input(label="Traduce: Me gusta Real Madrid a ingles")
+st.title('Traductor: español-finés')
+prompt_text = st.text_input(label="Escribir el texto en español:")
 response = openai.Edit.create(
   engine="text-davinci-edit-001",
   input="prompt_text",
